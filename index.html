@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Generador de contraseñas</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+
+
+  <div class="container password">
+    <div class="formulario">
+
+      <h1 class="titulo">GENERADOR DE CONTRASEÑA</h1>
+
+      <!-- Input longitud -->
+      <div class="input-group mb-3 input-longitud">
+        <div class="input-group-prepend">
+          <span class="input-group-text" id="basic-addon3">Longitud de Contraseña</span>
+        </div>
+        <input type="number" min="6" max="20" class="form-control" id="inputLength" aria-describedby="basic-addon3" value="8">
+      </div>
+
+      <!-- Checkbox -->
+      <div class="seleccion">
+        <div class="form-check form-check-inline">
+          <input id="letras" class="form-check-input" type="checkbox" value="letras" checked>
+          <label class="form-check-label" for="inlineCheckbox1">Letras</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input id="numeros" class="form-check-input" type="checkbox" value="numeros" checked>
+          <label class="form-check-label" for="inlineCheckbox2">Números</label>
+        </div>
+        <div class="form-check form-check-inline">
+          <input id="simbolos" class="form-check-input" type="checkbox" value="simbolos" checked>
+          <label class="form-check-label" for="inlineCheckbox3">Símbolos</label>
+        </div>
+      </div>
+
+      <!-- Botón función -->
+      <div>
+        <button id=boton class="generar btn btn-primary" type="button" name="button" onclick="generar_contrasenya()">Generar Contraseña</button>
+      </div>
+
+      <!-- Contraseña generada -->
+      <div class="input-group mb-3 generar">
+        <input type="text" id="contrasenya" class="form-control contrasenya" value="Contraseña" readonly="readonly">
+        <div class="input-group-append">
+          <button id="boton" class="btn btn-outline-secondary" type="button" onclick="copiar_contrasenya()">Copiar</button>
+        </div>
+      </div>
+
+      <!-- Mensaje de alerta
+      <div id="alerta" class="alert alert-danger w50 alerta" role="alert">
+        Elige al menos dos tipos de carácteres para conseguir una contraseña segura.
+      </div> -->
+
+
+    </div>
+  </div>
+
+
+    <script src="password.js"></script>
+  </body>
+</html>
