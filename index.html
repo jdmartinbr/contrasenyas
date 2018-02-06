@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Generador de contraseñas</title>
+    <script src="./tether/dist/js/tether.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="style.css">
@@ -48,16 +49,9 @@
       <div class="input-group mb-3 generar">
         <input type="text" id="contrasenya" class="form-control contrasenya" value="Contraseña" readonly="readonly">
         <div class="input-group-append">
-          <button id="boton" class="btn btn-outline-secondary" type="button" onclick="copiar_contrasenya()">Copiar</button>
+          <button id="boton" class="btn btn-outline-secondary" type="button" onclick="copiar_contrasenya()" href="#" data-toggle="tooltip" title="Copia la contraseña al clipboard" data-placement="top">Copiar</button>
         </div>
       </div>
-
-      <!-- Mensaje de alerta
-      <div id="alerta" class="alert alert-danger w50 alerta" role="alert">
-        Elige al menos dos tipos de carácteres para conseguir una contraseña segura.
-      </div> -->
-
-
     </div>
   </div>
 
